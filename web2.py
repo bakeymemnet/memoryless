@@ -3,7 +3,7 @@ import sys, os
 
 #settings
 webroot = "/www"
-webredir = "https://www.yahoo.com/"
+webredir = "https://www.yourdomain.com/"
 input = sys.stdin
 header1 = str(input.readline())
 header = header1
