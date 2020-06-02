@@ -17,4 +17,5 @@ for node support
 apk add nodejs
 
 Copy the web2.py in /usr/bin
-Copy inetd.conf to /etc```
+Copy inetd.conf to /etc
+```
