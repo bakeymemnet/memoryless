@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-import sys, os
+import sys, os, time
 
 #settings
 webroot = "/www"
+ts = time.strftime('%m:%d:%Y-%H:%M:%S')
 webredir = "https://www.yourdomain.com/"
 input = sys.stdin
 header1 = str(input.readline())
@@ -27,6 +28,9 @@ while header1 != "\r\n":
     agent = header1.lower()[12:-2]
   header1 = str(input.readline())
   header = header + header1
+log = open('/var/log/web2.log','a')
+log.write(ts + ',' + url + '\n')
+log.close()
 if url == "/":
 	url = webroot + '/index.html'
 else:
