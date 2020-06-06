@@ -5,7 +5,8 @@ Just as we have gone from servers to instances, instances to containers, and con
 
 Currently the system is designed around Alpine linux.
 
-```Packages needed
+```
+Packages needed
 apk add busybox-extras
 edit /etc/inetd.conf
 rc-service inetd start
@@ -19,3 +20,6 @@ apk add nodejs
 Copy the web2.py in /usr/bin
 Copy inetd.conf to /etc
 ```
+
+docker build --tag memless .
+docker run memless /usr/sbin/inetd
