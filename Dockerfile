@@ -10,4 +10,4 @@ RUN echo "<html><body><center>These aren&apos;t the droids you&apos;re looking f
 
 EXPOSE 80
 
-CMD ["/usr/sbin/inetd"]
+CMD ["/usr/sbin/inetd", "-f"]
