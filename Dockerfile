@@ -1,4 +1,4 @@
-From Alpine:latest
+From alpine:latest
 
 RUN apk update
 RUN apk add busybox-extras python3 php7 nodejs wget
