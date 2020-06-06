@@ -22,4 +22,7 @@ Copy inetd.conf to /etc
 ```
 
 docker build --tag memless .
+
 docker run memless /usr/sbin/inetd
+
+docker run --rm -d bakeysf/memless
