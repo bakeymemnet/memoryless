@@ -17,8 +17,11 @@ apk add php7
 for node support
 apk add nodejs
 
-Copy the web2.py in /usr/bin
-Copy inetd.conf to /etc
+cp web2.py /usr/bin/
+cp inetd.conf /etc/
+mkdir /www
+
+Copy files like index.html to /www/
 ```
 
 docker build --tag memless .
