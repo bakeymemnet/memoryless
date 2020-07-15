@@ -6,7 +6,7 @@ webroot = "/www"
 ts = time.strftime('%m:%d:%Y-%H:%M:%S')
 webredir = "https://www.yourdomain.com/"
 input = sys.stdin
-header1 = str(input.readline())
+header1 = str(input.readline(10240))
 header = header1
 url = ""
 host = ""
@@ -26,7 +26,7 @@ while header1 != "\r\n":
     encoding = header1.lower()[16:].split()
   if header1.lower().find('user-agent:') == 0:
     agent = header1.lower()[12:-2]
-  header1 = str(input.readline())
+  header1 = str(input.readline(10240))
   header = header + header1
 log = open('/var/log/web2.log','a')
 log.write(ts + ',' + url + '\n')
